@@ -86,6 +86,68 @@
           </form>
         </div>
       </dialog>
+      <!-- //contents of the notes -->
+      <div id="notes-container">
+        <div class="notes-header">
+          <h2 id="notes-heading">Notes</h2>
+          <button class="add-note-btn">+New note</button>
+        </div>
+        <div id="all-note-container">
+          <div id="default-note" class="default-notes">
+            <div class="note-text-container">
+              This is a samle note.For storing data, like recipe, phone number and address, etc.
+              <br>
+              <br>
+              Add, edit,delete your notes.
+            </div>
+            <button class="edit-btn edit-note-btn" >Edit</button>
+            <button class="delete-btn delete-note-btn" >Delete</button>
+            <div class="note-date">See date when note is created</div>
+          </div>
+        </div>
+      </div>
+      <!-- //A modal for  creating new notes -->
+      <dialog id="note-dialog">
+        <div class="note-modal-container">
+          <button id="close-note-modal- btn" class="close-btn" type="button">X</button>
+          <form method="dialog" id="note-form" class="modal-form">
+            <h1 class="modal title">Add note</h1>
+            <textarea id="note-text" class="modal-textarea" placeholder="Note-text" required></textarea>
+            <button id="save-note-btn" class="save-btn" type="submit">Save Note</button>
+          </form>
+        </div>
+      </dialog>
+      <!-- //modal for deleting -->
+      <dialog id="delete-conf-modal">
+        <div class="delete-conf-text"></div>
+        <button class="conf-delete-btn" type="button">Delete</button>
+        <button class="conf-cancel-btn" type="button">Cancel</button>
+      </dialog>
+      <dialog id="delete-conf-note-modal"></dialog>
+        <div class="delete-conf-note-text"></div>
+        <button class="conf-delete-note-btn" type="button">Delete</button>
+        <button class="conf-cancel-note-btn" type="button">Cancel</button>
+      </dialog>
+      <dialog id="delete-conf-project-modal"></dialog>
+        <div class="delete-conf-project-text"></div>
+        <button class="conf-delete-project-btn" type="button">Delete</button>
+        <button class="conf-cancel-project-btn" type="button">Cancel</button>
+      </dialog>
+      <!-- //end of modal for deleting
+      //end of notes content
+      //modal project -->
+      <dialog id="project-modal-container">
+        <button id="project-close-btn" class="close-btn" type="button">X</button>
+        <form method="dialog" id="project-form" class="modal-form">
+          <h2 class="modal-title">Add project</h2>
+          <span>Title:</span>
+          <input class="project-title-text" type="text" placeholder="Projects name" minlength="5" maxlength="20" required>
+          <span>Description:</span>
+          <textarea id="project-text" class="modal-textarea " type="text" placeholder="what is the project for" minlength="5" maxlength="100" required></textarea>
+          <button id="save-project-btn" class="save-btn" type="submit">Save</button>
+        </form>
+      </dialog>
+      <!-- //end of modal project -->
     </div>
   </body>
   
