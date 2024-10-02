@@ -113,6 +113,22 @@ body {
     background-size: contain;
     border: none;
 }
+.btn-all-tasks > span {
+    background-image: url("./Assets/icon/checklist3.png");
+}
+.btn-today-tasks > span {
+    background-image: url("./Assets/icon/today.png");
+}
+.btn-week-tasks > span {
+    background-image: url("./Assets/icon/timeline.png");
+}
+.btn-overdue-tasks > span {
+    background-image: url("./Assets/icon/overdue.png");
+}
+.btn-done-tasks > span {
+    background-image: url("./Assets/icon/today.png");
+}
+  
 
 
 
