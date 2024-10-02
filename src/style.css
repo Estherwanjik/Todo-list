@@ -1,6 +1,118 @@
 @font-face {
     font-family: "MyFont";
-    src: url("./assets/fonts/Manrope-ExtraLight.fff");
+    src: url("./Assets/fonts/Manrope-ExtraLight.ttf");
     font-weight: 600;
     font-style: normal;
 }
+::-webkit-scrollbar {
+    display: none;
+}
+:root {
+    --bg-Color: #0f2027;
+    --layout-Bg-Color:  #2c2364;
+    --logo-Main-Color: red;
+    --text-Color-White: white;
+    --text-Color-Gray: gray;
+    --select-Bg: rgba(235, 164, 42, 0.5);
+    --prio-Green: #30b24e;
+    --prio-Yellow: #e1940e;
+    --prio-Red: #ae1a1a;
+    --modal-Textarea-Color: #a7cdde;
+    --dialog-Backdrop: rgba(0, 0, 0, 0.5);
+    --save-Btn-color: rgba(255, 166, 0, 0.85);
+    --box-shadow-Color-Dark: rgba(255, 255, 255, 0);
+    --box-shadow-Color: rgba(175, 255, 255, 0.881);
+    --text-shadow: #427388;
+    --checkbox-border-color: rgba(203, 203, 203, 0.785);
+    --checkbox-checked-color: #e6ab52;
+    --checkbox-hover-color: rgba(255, 229, 182, 0.218);
+    --checkbox-disabled-bg-color: orange;
+}
+/* //layout style  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "MyFont";
+}
+html {
+    background-color: var(--bg-Color);
+}
+body {
+    color: var(--text-Color-White);
+    height: 98vh;
+}
+#layout-container {
+    width: 120rem;
+    height: 100%;
+    margin: 16px auto;
+    display: grid;
+    grid-template-columns: 2.5fr 10fr 3fr;
+    grid-template-rows: 1fr;
+    background-color: var(--bg-Color);
+    gap: 16px;
+}
+#sidebar-container,
+#task-container,
+#notes-container {
+  border-radius: 16px;
+  background-color: var(--layout-Bg-Color);
+  padding: 0 32px 32px 32px;
+  overflow: auto;
+}
+#sidebar-container,
+.task-header-container,
+.notes-header {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  background-color: var(--layout-Bg-Color);
+  padding-top: 32px;
+  z-index: 1;
+}
+/* layout of the side bar */
+#sidebar-container {
+    display: flex;
+    flex-direction: column;
+    text-align-last: left;
+}
+#app-logo {
+    color: var(--logo-Main-Color);
+    border-bottom: 1px var(--logo-Main-Color) solid;
+    padding-bottom: 4px;
+}
+#task-filter {
+    border-bottom: 1px var(--logo-Main-Color) solid;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    padding-bottom: 32px;
+}
+.for-icon,
+.btn,
+.btn-field,
+#add-task-btn,
+.add-note-btn,
+.add-project-btn,
+.edit-btn,
+.delete-btn,
+.close-btn,
+.conf-delete-btn,
+.conf-delete-note-btn,
+.conf-delete-project-btn,
+.conf-cancel-btn,
+.conf-cancel-note-btn,
+.conf-cancel-project-btn,
+.prio-span,
+.save-btn {
+  cursor: pointer;
+}.for-icon {
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+}
+
+
+
