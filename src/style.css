@@ -627,3 +627,53 @@ input:checked + .prio-high {
     width: 18px;
     height: 18px;
 }
+/* delete note note conform modal */
+#delete-conf-modal,
+#delete-conf-note-modal,
+#delete-conf-project-modal {
+  border: none;
+  text-align: center;
+  align-content: center;
+}
+
+.conf-delete-btn,
+.conf-delete-note-btn,
+.conf-delete-project-btn,
+.conf-cancel-btn,
+.conf-cancel-note-btn,
+.conf-cancel-project-btn {
+  font-size: 1rem;
+  border-style: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 36px 6px 0 6px;
+  border-radius: 8px;
+  color: var(--text-Color-White);
+}
+.conf-delete-btn,
+.conf-delete-note-btn,
+.conf-delete-project-btn {
+  background-color: var(--bg-Color);
+  border: var(--logo-Main-Color) solid 2px;
+}
+
+.conf-delete-btn:hover,
+.conf-delete-note-btn:hover,
+.conf-delete-project-btn:hover {
+  background-color: var(--logo-Main-Color);
+  transition: 0.5ms;
+}
+
+.conf-cancel-btn,
+.conf-cancel-note-btn,
+.conf-cancel-project-btn {
+  background-color: var(--bg-Color);
+  border: var(--text-Color-White) solid 2px;
+}
+.conf-cancel-btn:hover,
+.conf-cancel-note-btn:hover,
+.conf-cancel-project-btn:hover {
+  background-color: var(--text-Color-White);
+  color: var(--logo-Main-Color);
+  transition: 0.5ms;
+}
