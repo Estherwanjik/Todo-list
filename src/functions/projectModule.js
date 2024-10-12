@@ -217,6 +217,6 @@ function editProject(e) {
     });
     projectTitleText.value = projectToEdit.title;
     projectText.innerText = projectToEdit.description;
-    projectForm.dataset.id = projectToEdit.id;
+    projectForm.dataset.id = projectIdToEdit.id;
 }
 export { projectModal };
