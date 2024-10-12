@@ -13,8 +13,8 @@ module.exports = {
 	 new HtmlWebpackPlugin({
     //template: './src/template.html',
     template: './src/index.html',
-    filename: 'index.html',
-    inject: 'body',
+    //filename: 'index.html',
+    //inject: 'body',
     }),
   ],
   module: {
