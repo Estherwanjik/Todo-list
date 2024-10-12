@@ -88,6 +88,7 @@ body {
     margin-bottom: 16px;
     padding-bottom: 32px;
 }
+
 .for-icon,
 .btn,
 .btn-field,
@@ -106,7 +107,9 @@ body {
 .prio-span,
 .save-btn {
   cursor: pointer;
-}.for-icon {
+}
+
+.for-icon {
     width: 25px;
     height: 25px;
     background-repeat: no-repeat;
@@ -133,6 +136,7 @@ body {
   border-radius: 8px;
   border: none;
 }
+
 .btn {
     display: flex;
     flex-direction: row;
@@ -159,6 +163,7 @@ body {
       display: block;
     }
 }
+
 .current {
     background-color: var(--select-Bg);
     width: 100%;
