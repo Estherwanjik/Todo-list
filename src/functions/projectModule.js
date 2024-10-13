@@ -99,7 +99,7 @@ function onSubmitProjectModalDialog(e) {
     let projectDescription = projectText.value;
 
     if (projectId) {
-        let allProjects = getProject();
+        let allProjects = getProjects();
         let projectToEdit = allProjects.find((project) => {
             return project.id === projectId;
         });
@@ -122,8 +122,8 @@ function onSubmitProjectModalDialog(e) {
 }
 function getId() {
    let id;
-   do{
-    id = math.floor(math.random() * 10000);
+   do {
+    id = Math.floor(Math.random() * 10000);
    } while (isIdNotUnique(id));
    return id;
 }
