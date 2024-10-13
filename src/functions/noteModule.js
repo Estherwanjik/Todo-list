@@ -1,5 +1,4 @@
 import { format } from "date-fns";
-import { functions } from "lodash";
 
 const noteDialog = document.getElementById("note-dialog");
 const openNoteModal = document.querySelector(".add-note-btn");
