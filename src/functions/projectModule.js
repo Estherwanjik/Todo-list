@@ -180,7 +180,7 @@ function loadProjects() {
     removeProjectsFromDropdown();
     getProjects().forEach(function(project) {
         addToDropdownList(project.title);
-        
+        // addToProjectContainer(Project)
     });
 }
 
