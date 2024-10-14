@@ -101,7 +101,7 @@ function onSubmitNoteForm(e) {
 function getId() {
     let id;
     do {
-        id = math.floor(math.random() * 10000);
+        id = Math.floor(Math.random() * 10000);
     } while(isIdNotUnique(id));
     return id;
 }
