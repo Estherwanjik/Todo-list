@@ -1,3 +1,4 @@
+
 import "../src/style.css";
 import { noteModal } from "./functions/noteModule";
 import { taskModal } from "./functions/taskModule";
