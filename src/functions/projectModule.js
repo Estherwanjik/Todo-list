@@ -18,6 +18,7 @@ function projectModal() {
         projectModalDialog.showModal();
         projectText.innerText = "";
     }
+
     function closeProjectModal() {
         projectModalDialog.close();
     }
@@ -69,6 +70,7 @@ class Project {
         projectBtnField.appendChild(projectDescription);
         projectBtnField.appendChild(editProjectBtn);
         projectBtnField.appendChild(deleteProjectBtn);
+
         return project;
     }   
 }
@@ -147,7 +149,7 @@ function saveProject(newProject) {
 }
 
 function getProjects() {
-    return JSON.parse(localStorage.getItem("projects")) || [].map((project) => {
+    return JSON.parse(localStorage.getItem("project")) || [].map((project) => {
         return new project(project.id, project.title, project.description);
     });
 }
@@ -178,9 +180,9 @@ function addToDropdownList(projectTitle) {
 function loadProjects() {
     removeProjectsFromHtml();
     removeProjectsFromDropdown();
-    getProjects().forEach(function(project) {
+    getProjects().forEach(function (project) {
+        addToProjectContainer(project)
         addToDropdownList(project.title);
-        // addToProjectContainer(Project)
     });
 }
 
@@ -214,10 +216,10 @@ function editProject(e) {
     let allProjects = getProjects();
     const projectIdToEdit = parseInt(e.srcElement.dataset.id);
     const projectToEdit = allProjects.find((project) => {
-        return project.id === projectToEdit;
+        return project.id === projectIdToEdit;
     });
     projectTitleText.value = projectToEdit.title;
     projectText.innerText = projectToEdit.description;
-    projectForm.dataset.id = projectIdToEdit.id;
+    projectForm.dataset.id = projectToEdit.id;
 }
 export { projectModal };
