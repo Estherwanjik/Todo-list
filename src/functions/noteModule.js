@@ -18,7 +18,7 @@ function noteModal() {
     });
 
     closeNoteModal.addEventListener("click", () => {
-        noteDialog.closest();
+        noteDialog.close();
     });
 
     loadNotes();
