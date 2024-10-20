@@ -153,8 +153,9 @@ function showDeleteConfirm(e) {
 }
 
 function hideDeleteModal() {
-    deleteConfNoteModal.closest();
+    deleteConfNoteModal.close();
 }
+
 confDeleteNoteBtn.addEventListener("click", deleteNotes);
 confCancelBtn.addEventListener("click", hideDeleteModal);
 
@@ -178,7 +179,7 @@ function editNote(e) {
         return note.id === noteIdToEdit;
     });
     noteText.innerText = noteToEdit.noteText;
-    noteForm.dataset.id = noteToEdit;
+    noteForm.dataset.id = noteToEdit.id;
 }
 
 export { noteModal };
