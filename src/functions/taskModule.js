@@ -21,17 +21,17 @@ let completeTasksBtn = document.querySelector(".btn-done-tasks");
 let allTasksDefault = document.querySelector(".btn-field-default");
 
 function taskModal() {
-    openTaskModal.addEventListener("click", () => {
-        taskDialog.showModal();
-        taskText.innerText = "";
-    });
-    closeTaskModal.addEventListener("click", () => {
-        taskDialog.close();
-    });
+  openTaskModal.addEventListener("click", () => {
+      taskDialog.showModal();
+      taskText.innerText = "";
+  });
+  closeTaskModal.addEventListener("click", () => {
+      taskDialog.close();
+  });
 
-    loadTasks();
-    setDateValue();
-    registerSubmitForm();
+  loadTasks();
+  setDateValue();
+  registerSubmitForm();
 }
 //console.log(taskModal)
 function setDateValue() {
@@ -106,24 +106,25 @@ class Task {
 }
 
 function taskComplete(e) {
-    const checkbox = e.srcElement;
-    let checkboxId = parseInt(checkbox.dataset.id);
-    let allTasks = getTasks();
-    let taskToEdit = allTasks.find((task) => {
-      return task.id === checkboxId;
-    });
-    taskToEdit.complete = !!checkbox.checked;
-  
-    let task = document.querySelector(`[data-id="${checkboxId}"]`, ".new-task");
-    if (taskToEdit.complete) {
-      task.classList.add("completed");
-    } else {
-      task.classList.remove("completed");
-    }
-    setTasks(allTasks);
+  const checkbox = e.srcElement;
+  let checkboxId = parseInt(checkbox.dataset.id);
+  let allTasks = getTasks();
+  let taskToEdit = allTasks.find((task) => {
+    return task.id === checkboxId;
+  });
+  taskToEdit.complete = !!checkbox.checked;
+
+  let task = document.querySelector(`[data-id="${checkboxId}"]`, ".new-task");
+  if (taskToEdit.complete) {
+    task.classList.add("completed");
+  } else {
+    task.classList.remove("completed");
+  }
+  setTasks(allTasks);
 }
+
 function registerSubmitForm() {
-    taskForm.addEventListener("submit", onSubmitForm);
+  taskForm.addEventListener("submit", onSubmitForm);
 }
 
 function onSubmitForm(e) {
@@ -140,17 +141,18 @@ function onSubmitForm(e) {
       }).value;
     let taskProject = document.getElementById("project").value;
     let complete = false;
+
     if (taskId) {
-        let allTasks = getTasks();
-        let taskToEdit = allTasks.find((task) => {
-          return task.id === taskId;
-        });
-        taskToEdit.text = taskText;
-        taskToEdit.date = taskDateFormat;
-        taskToEdit.prio = taskPrio;
-        setTasks(allTasks);
-    
-        delete e.srcElement.dataset.id;
+      let allTasks = getTasks();
+      let taskToEdit = allTasks.find((task) => {
+        return task.id === taskId;
+      });
+      taskToEdit.text = taskText;
+      taskToEdit.date = taskDateFormat;
+      taskToEdit.prio = taskPrio;
+      setTasks(allTasks);
+  
+      delete e.srcElement.dataset.id;
     } else {
         let id = getId();
     
