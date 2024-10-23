@@ -147,12 +147,14 @@ function saveProject(newProject) {
     allProjects.push(newProject);
     setProjects(allProjects);
 }
-
 function getProjects() {
-    return JSON.parse(localStorage.getItem("project")) || [].map((project) => {
-        return new project(project.id, project.title, project.description);
+    return (JSON.parse(localStorage.getItem("project")) || []).map((project) => {
+      return new Project(project.id, project.title, project.description);
     });
-}
+  }
+
+
+
 
 function setProjects(projects) {
     localStorage.setItem("project", JSON.stringify(projects));
@@ -207,7 +209,7 @@ function deleteProjects(e) {
     });
     allProjects.splice(indexToRemove, 1);
     setProjects(allProjects);
-    loadProjects()
+    loadProjects();
     hideDeleteModal();
 }
 
