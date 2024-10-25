@@ -1,7 +1,9 @@
 
 @font-face {
     font-family: "MyFont";
-    src: url("./Assets/fonts/Manrope-ExtraLight.ttf");
+    src: url("./Assets/fonts/Manrope-ExtraLight.ttf") format('ttf');
+   
+
     font-weight: 600;
     font-style: normal;
 }

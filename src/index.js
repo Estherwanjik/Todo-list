@@ -8,6 +8,10 @@ function initialize() {
   noteModal();
   taskModal();
   projectModal();
-}  
+} 
+
+if (module.hot) {
+    module.hot.accept();
+}
 
 document.addEventListener("DOMContentLoaded", initialize);
