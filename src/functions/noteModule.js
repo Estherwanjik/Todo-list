@@ -65,7 +65,6 @@ class Note {
 
     }
 }
-
 function registerNoteSubmitForm() {
     noteForm.addEventListener("submit", onSubmitNoteForm)
 }
