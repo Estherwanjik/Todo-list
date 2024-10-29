@@ -11,7 +11,7 @@ function initialize() {
 } 
 
 if (module.hot) {
-    module.hot.accept();
+  module.hot.accept();
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
