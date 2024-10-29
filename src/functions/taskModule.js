@@ -183,11 +183,11 @@ function getId() {
 }
 
 function isIdNotUnique(id) {
-    return getTasks()
-      .map((task) => {
+  return getTasks()
+    .map((task) => {
         return task.id;
-      })
-      .includes(id);
+    })
+    .includes(id);
 }
 function addToList(newTask) {
     taskList.appendChild(newTask.getAsRow());
