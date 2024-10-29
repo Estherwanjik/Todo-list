@@ -151,10 +151,7 @@ function getProjects() {
     return (JSON.parse(localStorage.getItem("project")) || []).map((project) => {
       return new Project(project.id, project.title, project.description);
     });
-  }
-
-
-
+}
 
 function setProjects(projects) {
     localStorage.setItem("project", JSON.stringify(projects));
