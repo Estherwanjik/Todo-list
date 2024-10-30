@@ -94,7 +94,7 @@ function onSubmitNoteForm(e) {
     loadNotes();
 
     e.srcElement.reset();
-    noteDialog.closest();
+    noteDialog.close();
 }
 
 function getId() {
