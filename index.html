@@ -39,7 +39,7 @@
           </div>
           <div class="task-list-header">
             <div class="task">
-              <span>Priority</span>
+              <span>Prio</span>
               <span>Done</span>
               <span class="task-name">Task Name</span>
               <span>Due By</span>
@@ -51,7 +51,9 @@
         <div id="task-list">
           <div id="no-task-container">
             <div class="no-task-img"></div>
-            <div class="no-task-text">Your journey starts here</div>
+            <div class="no-tasks-text">
+              Your journey starts here!
+            </div>
           </div>
         </div>
       </div>
@@ -60,22 +62,22 @@
         <div class="task-modal-container">
           <button id="close-task-modal-btn" class="close-btn">X</button>
           <form method="dialog" id="task-form" class="modal-form">
-            <h1 class="modal-title">Add Tasks</h1>
-            <div class="tasks input">
-              <textarea id="task-text" class="modal textarea" placeholder="Enter your task..." required></textarea>
+            <h1 class="modal-title">Add task</h1>
+            <div class="task input">
+              <textarea id="task-text" class="modal-textarea" placeholder="Enter your task..." required></textarea>
             </div>
             <div class="task-date">
-              <label for="task-date">Task date</label>
-              <input type="date" id="task-date" name="task start"/>
+              <label for="task-date">Task date:</label>
+              <input type="date" id="task-date" name="task-start"/>
             </div>
-            <div class="task prio">
-              <label for="prio">Task priority</label>
+            <div class="task-prio">
+              <label for="prio">Task priority:</label>
               <label class="prio-radio"><input type="radio" id="prio" name="task-priority" value="low" checked><span class="prio-span prio-low">Low</span></label>
-              <label class="prio-radio"><input type="radio" id="prio-medium" name="task-priority" value="Medium" checked><span class="prio-span prio-low">Medium</span></label>
+              <label class="prio-radio"><input type="radio" id="prio-medium" name="task-priority" value="medium" checked><span class="prio-span prio-low">Medium</span></label>
               <label class="prio-radio"><input type="radio" id="prio-high" name="task-priority" value="high" checked><span class="prio-span prio-low">High</span></label>
             </div>
             <div class="task-project">
-              <label for="project">Project</label>
+              <label for="project">Project:</label>
               <select name="project" id="project">
                 <option>None</option>
               </select>
@@ -94,9 +96,9 @@
           <div id="default-note" class="default-note">
             <div class="note-text-container">
               This is a sample note.For storing data, like recipe, phone number and address, etc.
-              <br>
-              <br>
-              Add, edit delete your notes.
+              <br />
+              <br />
+              Add, edit and delete your notes.
             </div>
             <button class="edit-btn edit-note-btn">Edit</button>
             <button class="delete-btn delete-note-btn">Delete</button>
