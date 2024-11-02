@@ -1,7 +1,6 @@
 import { isThisISOWeek, isToday, isPast, format } from "date-fns";
 
 const taskDialog = document.getElementById("task-dialog");
-//console.log(taskDialog)
 const openTaskModal = document.getElementById("add-task-btn");
 const closeTaskModal = document.getElementById("close-task-modal-btn");
 const taskText = document.getElementById("task-text");
@@ -33,7 +32,7 @@ function taskModal() {
   setDateValue();
   registerSubmitForm();
 }
-//console.log(taskModal)
+
 function setDateValue() {
   const today = new Date().toISOString().split("T")[0];
   taskDate.setAttribute("min", today);
@@ -154,18 +153,18 @@ function onSubmitForm(e) {
   
       delete e.srcElement.dataset.id;
     } else {
-        let id = getId();
-    
-        let newTask = new Task(
-          id,
-          taskText,
-          taskDateFormat,
-          taskPrio,
-          taskProject,
-          complete,
-        );
-    
-        saveTask(newTask);
+      let id = getId();
+  
+      let newTask = new Task(
+        id,
+        taskText,
+        taskDateFormat,
+        taskPrio,
+        taskProject,
+        complete,
+      );
+  
+      saveTask(newTask);
     }
     
     loadTasks();
