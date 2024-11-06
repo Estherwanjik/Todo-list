@@ -71,7 +71,7 @@ function registerNoteSubmitForm() {
 
 function onSubmitNoteForm(e) {
     const noteId = parseInt(e.srcElement.dataset.id);
-    let note = noteText.ariaValueMax;
+    let note = noteText.Value;
 
     if (noteId) {
         let allNotes = getNotes();
@@ -100,7 +100,7 @@ function onSubmitNoteForm(e) {
 function getId() {
     let id;
     do {
-        id = Math.floor(Math.random() * 10000);
+      id = Math.floor(Math.random() * 10000);
     } while(isIdNotUnique(id));
     return id;
 }
