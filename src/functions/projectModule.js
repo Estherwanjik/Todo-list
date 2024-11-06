@@ -221,4 +221,5 @@ function editProject(e) {
     projectText.innerText = projectToEdit.description;
     projectForm.dataset.id = projectToEdit.id;
 }
+
 export { projectModal };

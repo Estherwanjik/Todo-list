@@ -328,6 +328,26 @@ function editTask(e) {
   document.getElementById(hashmap[taskToEdit.prio]).checked = taskToEdit.prio;
   taskForm.dataset.id = taskToEdit.id;
 }
+
+/* function editTask(e) {
+  taskDialog.showModal();
+  let allTasks = getTasks();
+  const taskIdToEdit = parseInt(e.srcElement.dataset.id);
+  const taskToEdit = allTasks.find((task) => {
+    return task.id === taskIdToEdit;
+  });
+  taskText.innerText = taskToEdit.text;
+  taskDate.value = taskToEdit.date;
+
+  const hashmap = {
+    low: "prio",
+    medium: "prio-medium",
+    high: "prio-high",
+  };
+
+  document.getElementById(hashmap[taskToEdit.prio]).checked = taskToEdit.prio;
+  taskForm.dataset.id = taskToEdit.id;
+} */
   
 export { taskModal, loadProjectTasks };
 
