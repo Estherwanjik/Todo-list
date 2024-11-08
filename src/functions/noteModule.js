@@ -71,7 +71,7 @@ function registerNoteSubmitForm() {
 
 function onSubmitNoteForm(e) {
     const noteId = parseInt(e.srcElement.dataset.id);
-    let note = noteText.Value;
+    let note = noteText.value;
 
     if (noteId) {
         let allNotes = getNotes();

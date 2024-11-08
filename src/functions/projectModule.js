@@ -97,7 +97,8 @@ function registerProjectModalDialog() {
 
 function onSubmitProjectModalDialog(e) {
     const projectId = parseInt(e.srcElement.dataset.id);
-    let projectTitle = projectTitleText.Value;
+    let projectTitle = projectTitleText.value;
+
     let projectDescription = projectText.value;
 
     if (projectId) {
