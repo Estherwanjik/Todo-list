@@ -10,8 +10,8 @@ function initialize() {
   projectModal();
 } 
 
-if (module.hot) {
+/* if (module.hot) {
   module.hot.accept();
-}
+} */
 
 document.addEventListener("DOMContentLoaded", initialize);
