@@ -34,9 +34,8 @@ function taskModal() {
 }
 
 function setDateValue() {
-
-  const today = (format (new Date(), "MM-dd-yyyy"));
-  // const today = (format (new Date(), "yyyy-MM-dd"));
+  const today = new Date().toISOString().split("T")[0];
+  //const today = (format (new Date(), "yyyy-MM-dd"));
   taskDate.setAttribute("min", today);
   taskDate.setAttribute("value", today);
 }
@@ -134,9 +133,10 @@ function onSubmitForm(e) {
     let taskDate = document.getElementById("task-date").value;
     let taskDateFormat = format(new Date(taskDate), "PPP");
      
-    console.log((format (new Date(taskDate), "MM-dd-yyyy")));
-    // console.log((format (new Date(taskDate), "yyyy-MM-dd")));
-    console.log(taskDateFormat);
+    //console.log((format (new Date(taskDate), "yyyy-MM-dd")));
+    //const today = (format (new Date(), "yyyy-MM-dd"));
+    //console.log( const today = new Date().toISOString().split("T")[0];)
+    //console.log(taskDateFormat);
 
 
     let taskPrio = ["prio", "prio-medium", "prio-high"]
@@ -155,8 +155,8 @@ function onSubmitForm(e) {
         return task.id === taskId;
       });
       taskToEdit.text = taskText;
-      //taskToEdit.date = taskDateFormat;
-      taskToEdit.date = taskDate;
+      taskToEdit.date = taskDateFormat;
+      //taskToEdit.date = taskDate;
 
       taskToEdit.prio = taskPrio;
       setTasks(allTasks);
@@ -327,7 +327,7 @@ function editTask(e) {
     return task.id === taskIdToEdit;
   });
   taskText.innerText = taskToEdit.text;
-  taskDate.value = taskToEdit.date;
+  //taskDate.value = taskToEdit.date;
 
   console.log(taskToEdit);
 
